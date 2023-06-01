@@ -15,7 +15,7 @@
 		console.log("f:", f);
 		
 		f.action = "${pageContext.request.contextPath}/login/loginCheck.jsp";
-
+		f.submit();
 	}
 </script>
 </head>
@@ -26,15 +26,15 @@
 	System.out.println("msg :" + msg);
 	if(msg != null && msg.equals("null")){
 		out.print("<script>");
-		out.print("alert('정확히 입력해주세요.')");
+		out.print("alert('정확히 입력해라.')");
 		out.print("</script>");
 	}else if(msg != null && msg.equals("fail")){
 		out.print("<script>");
-		out.print("alert('아이디나 패스워드를 확인해주세요.')");
+		out.print("alert('아이디나 패스워드를 확인해라.')");
 		out.print("</script>");
 	}else if(msg != null && msg.equals("none")){
 		out.print("<script>");
-		out.print("alert('로그인 후 이용 가능합니다.')");
+		out.print("alert('로그인 후 접속 가능.')");
 		out.print("</script>");
 	}
 	

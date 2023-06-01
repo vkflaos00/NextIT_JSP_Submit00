@@ -32,7 +32,7 @@ public class OracleDriverLoader02 extends HttpServlet{
 	private void initConnectionPool() {
 		try {
 			String jdbcUrl = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
-			String userName = "jsp";
+			String userName = "jsp2";
 			String pw = "oracle";
 
 			ConnectionFactory connFactory = 

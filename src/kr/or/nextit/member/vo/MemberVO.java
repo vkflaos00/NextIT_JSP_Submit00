@@ -8,9 +8,16 @@ public class MemberVO {
 	private String cigarettesPerDay;
 	private String memJoinDate;
 	private String longestSmokeFreeDate;
-
+	private String loveName;
 
 	public MemberVO() {
+	}
+
+	@Override
+	public String toString() {
+		return "MemberVO [memId=" + memId + ", memPass=" + memPass + ", memName=" + memName + ", cigarettesPerDay="
+				+ cigarettesPerDay + ", memJoinDate=" + memJoinDate + ", longestSmokeFreeDate=" + longestSmokeFreeDate
+				+ ", loveName=" + loveName + "]";
 	}
 
 	public String getMemId() {
@@ -61,22 +68,12 @@ public class MemberVO {
 		this.longestSmokeFreeDate = longestSmokeFreeDate;
 	}
 
-	@Override
-	public String toString() {
-		return "MemberVO [memId=" + memId + ", memPass=" + memPass + ", memName=" + memName + ", cigarettesPerDay="
-				+ cigarettesPerDay + ", memJoinDate=" + memJoinDate + ", longestSmokeFreeDate=" + longestSmokeFreeDate
-				+ "]";
+	public String getLoveName() {
+		return loveName;
 	}
 
-	public MemberVO(String memId, String memPass, String memName, String cigarettesPerDay, String memJoinDate,
-			String longestSmokeFreeDate) {
-		super();
-		this.memId = memId;
-		this.memPass = memPass;
-		this.memName = memName;
-		this.cigarettesPerDay = cigarettesPerDay;
-		this.memJoinDate = memJoinDate;
-		this.longestSmokeFreeDate = longestSmokeFreeDate;
+	public void setLoveName(String loveName) {
+		this.loveName = loveName;
 	}
 
 }
