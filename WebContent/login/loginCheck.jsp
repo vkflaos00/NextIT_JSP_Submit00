@@ -39,11 +39,13 @@
 				sb1.append(" mem_id					       		");
 				sb1.append(" ,mem_pass					       	");
 				sb1.append(" ,mem_name					       	");
-				sb1.append(" ,cigarettesPerDay				   	");
-				sb1.append(" ,memJoinDate				       	");
-				sb1.append(" ,longestSmokeFreeDate			  	");
-				sb1.append(" ,loveName				       		");
-				sb1.append(" FROM member WHERE mem_id = ? 	");
+				sb1.append(" ,cpd				   	");
+				sb1.append(" ,join_date				       	");
+				sb1.append(" ,d_day			  	");
+				sb1.append(" ,love_name				       		");
+				sb1.append(" ,money				       			");
+				sb1.append(" ,good_count				       			");
+				sb1.append(" FROM member WHERE mem_id = ? 		");
 				
 				pstmt = conn.prepareStatement(sb1.toString());
 				pstmt.setString(1, memId);
@@ -56,10 +58,12 @@
 					member.setMemId(rs.getString("mem_id"));
 					member.setMemPass(rs.getString("mem_pass"));
 					member.setMemName(rs.getString("mem_name"));
-					member.setCigarettesPerDay(rs.getString("cigarettesPerDay"));
-					member.setMemJoinDate(rs.getString("memJoinDate"));
-					member.setLongestSmokeFreeDate(rs.getString("longestSmokeFreeDate"));
-					member.setLoveName(rs.getString("loveName"));
+					member.setCpd(rs.getString("cpd"));
+					member.setJoinDate(rs.getString("join_date"));
+					member.setdDay(rs.getInt("d_day"));
+					member.setLoveName(rs.getString("love_name"));
+					member.setMoney(rs.getInt("money"));
+					member.setGoodCount(rs.getInt("good_count"));
 					
 					System.out.println("member.toString() : " + member.toString());
 				}
@@ -77,7 +81,6 @@
 							Cookie cookie = new Cookie("rememberMe" , memId);
 							cookie.setMaxAge(60*60*24);
 							cookie.setHttpOnly(true);
-							// cookie.setSecure(true);
 							response.addCookie(cookie);
 						}else {
 							Cookie cookie = new Cookie("rememberMe" , "");
@@ -105,7 +108,6 @@
 		<c:if test="${exc ne null }">
 			<h3>로그인 처리 실패</h3>
 			<div class="alert alert-warning">
-				<p>로그인 실패</p>
 				<div class="btn-area">
 					<button type="button" onclick="history.back();">뒤로가기</button>
 				</div>

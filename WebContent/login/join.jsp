@@ -32,7 +32,7 @@
 		  $('button[name="btn_join"]').click(function() {
 		    let selectedValue = $('select[name="cigarettesPerDay"]').val();
 		    if (selectedValue === '') {
-		      alert('일일 흡연량을 선택해라.');
+		      alert('평소 흡연량을 선택해라.');
 		      return;
 		    }
 		  });
@@ -173,20 +173,20 @@
 
 
 			<div class="int-area int-area-select">
-				<label for=cigarettesPerDay> 일일 흡연량</label> <select
+				<label for=cigarettesPerDay> 평소 흡연량 </label> <select
 					name="cigarettesPerDay" required="required">
-					<option value="">-- 일일 흡연량 --</option>
-					<option value="CD01">1~5개피</option>
-					<option value="CD02">1~10개피</option>
-					<option value="CD03">10~15개피</option>
-					<option value="CD04">한 갑</option>
-					<option value="CD05">한 갑 반</option>
-					<option value="CD06">두 갑 이상</option>
+					<option value="">-- 평소 흡연량 --</option>
+					<option value="CD01">일주일에 한 갑</option>
+					<option value="CD02">3일에 한 갑</option>
+					<option value="CD03">이틀에 한 갑</option>
+					<option value="CD04">하루에 한 갑</option>
+					<option value="CD05">하루에 한 갑 반</option>
+					<option value="CD06">하루에 두 갑 이상</option>
 				</select>
 			</div>
 			<div class="int-area">
 				<label for=loveName></label> <input type="text" id="loveName"
-					name="loveName" placeholder="사랑하는 사람의 이름을 알려줘" value=""
+					name="loveName" placeholder="사랑하는 사람의 이름" value=""
 					autocomplete="off" required="required">
 			</div>
 

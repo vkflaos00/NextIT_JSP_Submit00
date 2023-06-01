@@ -50,18 +50,22 @@
 			sb2.append(" mem_id					       		");
 			sb2.append(" ,mem_pass					       	");
 			sb2.append(" ,mem_name					       	");
-			sb2.append(" ,cigarettesPerDay				   	");
-			sb2.append(" ,memJoinDate				       	");
-			sb2.append(" ,longestSmokeFreeDate			  	");
-			sb2.append(" ,loveName				       		");
+			sb2.append(" ,cpd				   	");
+			sb2.append(" ,join_date				       	");
+			sb2.append(" ,d_day			  	");
+			sb2.append(" ,love_name				       		");
+			sb2.append(" ,money				       			");
+			sb2.append(" ,good_count				       			");
 			sb2.append(" ) values(				       		");
 			sb2.append("  ?						       		");
 			sb2.append(" ,?						       		");
 			sb2.append(" ,?						       		");
 			sb2.append(" ,?						       		");
 			sb2.append(" ,sysdate				       		");
-			sb2.append(" ,sysdate						   		");
+			sb2.append(" ,730							");
 			sb2.append(" ,?						       		");
+			sb2.append(" ,0						       		");
+			sb2.append(" ,0						       		");
 			sb2.append(" )						       		");
 			
 			pstmt = conn.prepareStatement(sb2.toString());
@@ -70,7 +74,7 @@
 			pstmt.setString(cnt++, member.getMemId());
 			pstmt.setString(cnt++, member.getMemPass());
 			pstmt.setString(cnt++, member.getMemName());
-			pstmt.setString(cnt++, member.getCigarettesPerDay());
+			pstmt.setString(cnt++, member.getCpd());
 			pstmt.setString(cnt++, member.getLoveName());
 			
 			int resultCnt1 = pstmt.executeUpdate();
@@ -102,7 +106,6 @@
 		<c:if test="${bne eq null && bde eq null && se eq null}">
 			<h3>회원등록 성공</h3>
 			<div class="alert alert-success">
-				<p>가입 성공! 확인을 클릭하면 로그인 페이지로 이동.</p>
 				<div class="btn-area">
 					<button type="button"
 						onclick="location.href='${pageContext.request.contextPath}/login/login.jsp'">확인</button>
@@ -121,7 +124,6 @@
 		<c:if test="${bne ne null or se ne null }">
 			<h3>회원등록 실패</h3>
 			<div class="alert alert-success">
-				<p>가입실패</p>
 				<div class="btn-area">
 					<button type="button" onclick="history.back();">뒤로가기</button>
 				</div>

@@ -5,19 +5,14 @@ public class MemberVO {
 	private String memId;
 	private String memPass;
 	private String memName;
-	private String cigarettesPerDay;
-	private String memJoinDate;
-	private String longestSmokeFreeDate;
+	private String cpd;
+	private String joinDate;
+	private int dDay;
 	private String loveName;
+	private int money;
+	private int goodCount;
 
 	public MemberVO() {
-	}
-
-	@Override
-	public String toString() {
-		return "MemberVO [memId=" + memId + ", memPass=" + memPass + ", memName=" + memName + ", cigarettesPerDay="
-				+ cigarettesPerDay + ", memJoinDate=" + memJoinDate + ", longestSmokeFreeDate=" + longestSmokeFreeDate
-				+ ", loveName=" + loveName + "]";
 	}
 
 	public String getMemId() {
@@ -44,28 +39,28 @@ public class MemberVO {
 		this.memName = memName;
 	}
 
-	public String getCigarettesPerDay() {
-		return cigarettesPerDay;
+	public String getCpd() {
+		return cpd;
 	}
 
-	public void setCigarettesPerDay(String cigarettesPerDay) {
-		this.cigarettesPerDay = cigarettesPerDay;
+	public void setCpd(String cpd) {
+		this.cpd = cpd;
 	}
 
-	public String getMemJoinDate() {
-		return memJoinDate;
+	public String getJoinDate() {
+		return joinDate;
 	}
 
-	public void setMemJoinDate(String memJoinDate) {
-		this.memJoinDate = memJoinDate;
+	public void setJoinDate(String joinDate) {
+		this.joinDate = joinDate;
 	}
 
-	public String getLongestSmokeFreeDate() {
-		return longestSmokeFreeDate;
+	public int getdDay() {
+		return dDay;
 	}
 
-	public void setLongestSmokeFreeDate(String longestSmokeFreeDate) {
-		this.longestSmokeFreeDate = longestSmokeFreeDate;
+	public void setdDay(int dDay) {
+		this.dDay = dDay;
 	}
 
 	public String getLoveName() {
@@ -75,5 +70,30 @@ public class MemberVO {
 	public void setLoveName(String loveName) {
 		this.loveName = loveName;
 	}
+
+	public int getMoney() {
+		return money;
+	}
+
+	public void setMoney(int money) {
+		this.money = money;
+	}
+
+	public int getGoodCount() {
+		return goodCount;
+	}
+
+	public void setGoodCount(int goodCount) {
+		this.goodCount = goodCount;
+	}
+
+	@Override
+	public String toString() {
+		return "MemberVO [memId=" + memId + ", memPass=" + memPass + ", memName=" + memName + ", cpd=" + cpd
+				+ ", joinDate=" + joinDate + ", dDay=" + dDay + ", loveName=" + loveName + ", money=" + money
+				+ ", goodCount=" + goodCount + "]";
+	}
+
+	
 
 }
