@@ -9,7 +9,7 @@
 	}
 	
 %>
-
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/css/header.css">
 <script type="text/javascript">
 
 	$(function(){
@@ -22,13 +22,7 @@
 		}
 	});
 	
-	function fn_logout() {
-		// alert("fn_logout");
-		let ret = confirm("로그아웃?");
-		if (ret) {
-			location.href = "${pageContext.request.contextPath}/login/logout.jsp";
-		}
-	}
+
 </script>
 </head>
 <body>
@@ -36,11 +30,11 @@
 		<div id="img_div" class="intro_bg">
 			<div class="div_header">
 				<ul class="nav">
-					<li><a href="#">접속자[ ${memberVO.memId} ]</a></li>
-					<li><a href="#about">도움</a></li>
-					<li><a href="#service">랭크</a></li>
-					<li><a href="#">게시판</a></li>
-					<li><a href="#" onclick="fn_logout()">로그아웃</a></li>
+					<li><a onclick="location.href ='${pageContext.request.contextPath}/home/home.jsp'">[ ${memberVO.memName} ]</a></li>
+					<li><a onclick="location.href ='${pageContext.request.contextPath}/home/help.jsp'">도움</a></li>
+					<li><a onclick="location.href ='${pageContext.request.contextPath}/home/chart.jsp'">랭크</a></li>
+					<li><a onclick="location.href ='${pageContext.request.contextPath}/free/freeList.jsp'">게시판</a></li>
+					<li><a onclick="location.href ='${pageContext.request.contextPath}/login/logout.jsp'">로그아웃</a></li>
 				</ul>
 			</div>
 

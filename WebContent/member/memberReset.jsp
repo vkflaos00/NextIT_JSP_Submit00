@@ -14,6 +14,7 @@
 <head>
 <meta charset="UTF-8">
 <title>RESET</title>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/css/login.css">
 </head>
 <body>
 
@@ -48,7 +49,6 @@
 				sb2.append("join_date = sysdate, ");
 				sb2.append("d_day = 730, ");
 				sb2.append("money = 0, ");
-				sb2.append("good_count = 0 ");
 				sb2.append("WHERE mem_id = ?");
 
 				pstmt = conn.prepareStatement(sb2.toString());

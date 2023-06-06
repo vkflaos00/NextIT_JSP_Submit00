@@ -14,6 +14,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Register</title>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/css/login.css">
 </head>
 <body>
 	<jsp:useBean id="member" class="kr.or.nextit.member.vo.MemberVO"></jsp:useBean>
@@ -50,21 +51,15 @@
 			sb2.append(" mem_id					       		");
 			sb2.append(" ,mem_pass					       	");
 			sb2.append(" ,mem_name					       	");
-			sb2.append(" ,cpd								   	");
 			sb2.append(" ,join_date				       	");
 			sb2.append(" ,d_day			  						");
-			sb2.append(" ,love_name				       	");
 			sb2.append(" ,money				       			");
-			sb2.append(" ,good_count				       	");
 			sb2.append(" ) values(				       		");
 			sb2.append("  ?						       		");
 			sb2.append(" ,?						       		");
 			sb2.append(" ,?						       		");
-			sb2.append(" ,?						       		");
 			sb2.append(" ,sysdate				       		");
 			sb2.append(" ,730									");
-			sb2.append(" ,?						       		");
-			sb2.append(" ,0						       		");
 			sb2.append(" ,0						       		");
 			sb2.append(" )						       		");
 			
@@ -74,8 +69,6 @@
 			pstmt.setString(cnt++, member.getMemId());
 			pstmt.setString(cnt++, member.getMemPass());
 			pstmt.setString(cnt++, member.getMemName());
-			pstmt.setString(cnt++, member.getCpd());
-			pstmt.setString(cnt++, member.getLoveName());
 			
 			int resultCnt1 = pstmt.executeUpdate();
 			System.out.println("resultCnt1 : " + resultCnt1);

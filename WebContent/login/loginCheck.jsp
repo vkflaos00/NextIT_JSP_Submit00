@@ -39,12 +39,9 @@
 				sb1.append(" mem_id					       		");
 				sb1.append(" ,mem_pass					       	");
 				sb1.append(" ,mem_name					       	");
-				sb1.append(" ,cpd				   	");
 				sb1.append(" ,join_date				       	");
 				sb1.append(" ,d_day			  	");
-				sb1.append(" ,love_name				       		");
 				sb1.append(" ,money				       			");
-				sb1.append(" ,good_count				       			");
 				sb1.append(" FROM member WHERE mem_id = ? 		");
 				
 				pstmt = conn.prepareStatement(sb1.toString());
@@ -58,12 +55,9 @@
 					member.setMemId(rs.getString("mem_id"));
 					member.setMemPass(rs.getString("mem_pass"));
 					member.setMemName(rs.getString("mem_name"));
-					member.setCpd(rs.getString("cpd"));
 					member.setJoinDate(rs.getString("join_date"));
 					member.setdDay(rs.getInt("d_day"));
-					member.setLoveName(rs.getString("love_name"));
 					member.setMoney(rs.getInt("money"));
-					member.setGoodCount(rs.getInt("good_count"));
 					
 					System.out.println("member.toString() : " + member.toString());
 				}
@@ -76,6 +70,7 @@
 						System.out.println("로그인 성공");
 						session.setAttribute("memberVO", member);
 				
+						
 						if(rememberMe != null && rememberMe.equals("Y")) {
 							System.out.println("rememberMe is Y");
 							Cookie cookie = new Cookie("rememberMe" , memId);

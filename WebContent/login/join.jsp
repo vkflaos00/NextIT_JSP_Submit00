@@ -8,6 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>join</title>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/css/join.css">
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>
 	$(function() {
@@ -149,7 +150,6 @@
 </head>
 <body>
 	<section class="login_form">
-		<h1>가입</h1>
 		<form name="loginForm" method="post">
 			<div class="int-area">
 				<label for=memId></label> <input type="text" id="memId" name="memId"
@@ -169,25 +169,6 @@
 				<label for=memName></label> <input type="text" id="memName"
 					name="memName" placeholder="NICKNAME" value="" autocomplete="off"
 					required="required">
-			</div>
-
-
-			<div class="int-area int-area-select">
-				<label for=cigarettesPerDay> 평소 흡연량 </label> <select
-					name="cigarettesPerDay" required="required">
-					<option value="">-- 평소 흡연량 --</option>
-					<option value="CD01">일주일에 한 갑</option>
-					<option value="CD02">3일에 한 갑</option>
-					<option value="CD03">이틀에 한 갑</option>
-					<option value="CD04">하루에 한 갑</option>
-					<option value="CD05">하루에 한 갑 반</option>
-					<option value="CD06">하루에 두 갑 이상</option>
-				</select>
-			</div>
-			<div class="int-area">
-				<label for=loveName></label> <input type="text" id="loveName"
-					name="loveName" placeholder="사랑하는 사람의 이름" value=""
-					autocomplete="off" required="required">
 			</div>
 
 			<div class="btn-area">
