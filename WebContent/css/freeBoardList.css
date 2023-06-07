@@ -5,17 +5,29 @@
     position: relative;
     top: 300px;
 }
-.intro_text > h1, .intro_text > h4 {
-    color: #fff;
+h2 {
+	margin-top : 50px;
+	color: #000;
+
 }
 
-/* =========================2�� intro_bg e */
-/* ��ü������� */
+.header {
+	width: 100% !important;
+	height: 200px;
+	display: flex;
+}
+
+.top_nav {
+	width: 100% !important;
+	height: 200px;
+	display: flex;
+}
+
 .contents{
     width: 100%;
     background-color: lightslategrey;
 }
-/* ����� ������� */
+
 .content01{
     width: 1280px;
     height: 100%;
@@ -30,14 +42,14 @@
 .content01_h1 > h1{
     padding-top: 30px;
 }
-/* ���̺� ������� */
+
 #div_table{
     width: 1280px;
     height: 100%;
     background-color: lightsalmon;
 }
  
-/* list */
+
 #div_table > table{
     width: 80%;
     height: 500px;
@@ -82,17 +94,16 @@ th, td {
 }
 .contents, .content01, .content01_h1, #div_table, #div_table > table,
      .div_paging, .pagination, .div_board_write{
-    background-color: #fff;
+    background-color: #999999;
 }
 
 
-/* ===============================================3�� contents �۾� e */
-/* ��ưŬ�� �׼� */
+
 .div_board_write > input:active{
     transform:translate(2px,2px);
 }
 
-/* ����¡  CSSó�� */
+/
 .pagination a{
    padding-left:7px
 }
@@ -101,38 +112,45 @@ th, td {
    font-weight:bold;
 }
 
-/*����¡ ���� ���������� �߰�   */
+
 .curPage_a{
 	color: red;
    	font-weight:bold;
 }
 
-/* ����¡��ϰǼ� */
+
 .rowSizePerPage{
     text-align: right;
     margin-right: 150px;
     margin-bottom: 20px;
 }
 
- /* �˻��� �����1 */
+
 .div_search{
 	width: 1280px;
 	height: 50px;
 	/* background-color: lightBlue; */
-	margin-bottom: 10px;
+
 }
-/* �˻��� �����2 */
+
 .div_search form{
 	width: 1024px;
 	height: 100%;
 	background-color: lightgray;
 }
-/* �˻��� �����3 */
+
 .div_search div{
 	text-align: center;
 	padding-top: 15px;
 }
-/* �˻��� �����4 */
+
 .div_search input{
 	outline: none;
+}
+
+h1 {
+	margin-left : 30%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	color: #900000;
 }

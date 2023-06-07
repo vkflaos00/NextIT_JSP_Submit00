@@ -3,7 +3,7 @@
 <%@page import="java.net.HttpURLConnection"%>
 <%@page import="java.net.URL"%>
 <%@page import="kr.or.nextit.member.vo.MemberVO"%>
-<%@ page import="java.io.InputStreamReader" %>
+<%@ page import="java.io.InputStreamReader"%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -24,8 +24,9 @@
 	}
 %>
 
+
 <script>
-  // API 요청 URL
+// API 요청 URL
   var apiUrl = "https://api.odcloud.kr/api/15018867/v1/uddi:9fdf2982-70c8-4295-8174-a958d32f7056?page=1&perPage=10&serviceKey=oTZF%2FauXJZcuxpo6Nq2Sy5LIy68VV%2B%2FDisNVz8G6HcqBntJgCQsYNSGPMRds1xzonxMBE%2BD77qZuSKquOC3%2B4Q%3D%3D";
 
   // API 호출
@@ -73,7 +74,7 @@
 
 </head>
 <body>
-		<div id="wrap">
+	<div id="wrap">
 		<header id="page_header">
 			<%@ include file="/header/header.jsp"%>
 		</header>
@@ -82,6 +83,8 @@
 		<hr>
 		<h1>가만히 있어도 성공하는 세상에서 가장 쉬운 도전</h1>
 		<hr>
+
+		<div id="map" style="width: 500px; height: 200px;"></div>
 
 		<div id="table-container">
 			<!-- 테이블이 여기에 동적으로 생성됩니다 -->

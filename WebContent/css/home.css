@@ -147,13 +147,12 @@ th, td {
 }
 
 
-/* ===============================================3�� contents �۾� e */
-/* ��ưŬ�� �׼� */
+
 .div_board_write > input:active{
     transform:translate(2px,2px);
 }
 
-/* ����¡  CSSó�� */
+
 .pagination a{
    padding-left:7px
 }
@@ -162,38 +161,37 @@ th, td {
    font-weight:bold;
 }
 
-/*����¡ ���� ���������� �߰�   */
 .curPage_a{
 	color: red;
    	font-weight:bold;
 }
 
-/* ����¡��ϰǼ� */
 .rowSizePerPage{
     text-align: right;
     margin-right: 150px;
     margin-bottom: 20px;
 }
 
- /* �˻��� �����1 */
 .div_search{
 	width: 1280px;
 	height: 50px;
 	/* background-color: lightBlue; */
 	margin-bottom: 10px;
 }
-/* �˻��� �����2 */
 .div_search form{
 	width: 1024px;
 	height: 100%;
 	background-color: lightgray;
 }
-/* �˻��� �����3 */
 .div_search div{
 	text-align: center;
 	padding-top: 15px;
 }
-/* �˻��� �����4 */
 .div_search input{
 	outline: none;
+}
+
+#table-container {
+	font-size: 20px;
+	boader-line : 2px;
 }

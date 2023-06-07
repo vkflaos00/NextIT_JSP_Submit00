@@ -16,6 +16,7 @@
 	if (member == null) {
 		response.sendRedirect(request.getContextPath() + "/login/login.jsp?msg=none");
 	}
+	
 %>
 
 <script>

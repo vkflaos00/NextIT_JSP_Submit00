@@ -129,22 +129,23 @@ try{
 }
 %>
 
-<div id="wrap">
-    <div class="header">
-        <div class="top_nav">
-            <!-- header 영역 -->
-            <%@ include file="/header/header.jsp" %>
-            
-        </div>
-    </div>
-  
+	<div id="wrap">
+		<header id="page_header">
+			<%@ include file="/header/header.jsp"%>
+		</header>
 
-    <!-- 전체 영역잡기 -->
+		<!-- header e -->
+		<hr>
+		<h1>가만히 있어도 성공하는 세상에서 가장 쉬운 도전</h1>
+		<hr>
+
+
+
     <div class="contents">
         <!-- 사용할 영역잡기 -->
         <div class="content01">
             <div class="content01_h1">
-                <h1>자유게시판</h1>
+                <h2>자유게시판</h2>
             </div>
             
             <c:if test="${bne ne null or de ne null }">
@@ -212,14 +213,7 @@ try{
 		  		  <!-- 리스트 -->
 	            <div id="div_table">
 	                <table>
-	                    <colgroup>
-	                        <col width="100">
-	                        <col width="150">
-	                        <col >
-	                        <col width="150">
-	                        <col width="150">
-	                        <col width="100">
-	                    </colgroup>
+	               
 	                    <thead>
 	                        <tr>
 	                            <th>글번호</th>
